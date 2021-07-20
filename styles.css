@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+    --ff-spartan: 'Spartan', sans-serif;
+}
+
+body {
+    font-size: 15px;
+    font-family: var(--ff-spartan);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-top, .desktop-bottom {
+    display: none;
+}
+
+.mobile-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mobile-bottom {
+    position: absolute;
+    top: 70%;
+    right: 0;
+}
+
+.container {
+    margin: 4em 2em;
+}
+
+.heading-section {
+    display: flex;
+    justify-content: center;
+}
+
+.heading {
+    width: 70%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+}
+
+.para {
+    margin: 1em 0;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--dark-grayish-magenta);
+    word-spacing: 0.2rem;
+}
+
+.ratings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8em;
+    margin: 2em 0 3em;
+}
+
+.rating-box {
+    width: 100%;
+    height: 60px;
+    background: var(--light-grayish-magenta);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.stars {
+    text-align: center;
+}
+
+.rating-comment {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+}
+
+.quotations {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.review-block {
+    width: 100%;
+    height: 225px;
+    border-radius: 10px;
+    padding: 2.5em 1.5em 1.5em;
+    background: var(--very-dark-magenta);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-photo {
+    width: 40px;
+    height: 40px;
+    background: green;
+    border-radius: 50%;
+    background-size: contain;
+}
+
+.colton {
+    background-image: url(images/image-colton.jpg);
+}
+
+.irene {
+    background-image: url(images/image-irene.jpg);
+}
+
+.anne {
+    background-image: url(images/image-anne.jpg);
+}
+
+.name-title {
+    width: 60%;
+    padding-left: 20px;
+}
+
+.name-title>span {
+    display: block;
+}
+
+.name {
+    color: var(--light-grayish-magenta);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.title {
+    color: var(--soft-pink);
+    mix-blend-mode: overlay;
+    font-size: 0.8rem;
+}
+
+.review {
+    width: 100%;
+    margin-top: 1.5em;
+    color: var(--white);
+    font-size: 0.75rem;
+    line-height: 1.8;
+}
+
+/*media queries*/
+@media screen and (min-width: 1096px) {
+    .mobile-top, .mobile-bottom {
+        display: none;
+    }
+
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 650px;
+        width: 1400px;
+    }
+
+    .description {
+        width: 55%;
+        height: 40%;
+    }
+
+    .ratings {
+        width: 45%;
+        height: 40%;
+    }
+
+    .quotations {
+        width: 100%;
+        height: 60%;
+        flex-direction: row;
+    }
+
+    .desktop-top, .desktop-bottom{
+        display: block;
+        position: absolute;
+    }
+
+    .desktop-top {
+        top: 0;
+        left: 0;
+    }
+
+    .desktop-bottom {
+        bottom: 0;
+        right: 0;
+    }
+
+    .heading-section {
+        justify-content: flex-start;
+    }
+
+    .heading {
+        font-size: 2.8rem;
+        text-align: left;
+        width: 60%;
+    }
+
+    .para {
+        width: 63%;
+        font-size: 0.8rem;
+        text-align: left;
+        line-height: 1.3rem;
+    }
+
+    .ratings {
+        margin-top: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    .rating-box {
+        width: 70%;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 3em;
+        padding-left: 2em;
+    }
+
+    .rating-box:nth-child(2) {
+        margin: 0 auto;
+    }
+
+    .rating-box:nth-child(3) {
+        margin-left: auto;
+    }
+
+    .quotations {
+        gap: 2em;
+    }
+
+    .review-block {
+        height: 275px;
+        padding: 2.5em 2em;
+        row-gap: 0;
+    }
+
+    .review {
+        font-size: 1rem;
+        word-spacing: 0.2rem;
+    }
+
+    .review-block:nth-child(2) {
+        margin-top: 25px;
+    }
+
+    .review-block:nth-child(3) {
+        margin-top: 50px;
+    }
+}
